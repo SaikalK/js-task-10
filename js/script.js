@@ -1,7 +1,8 @@
 class Restaurant {
-    constructor(name, cusineType) {
+    constructor(name, cusineType, serve) {
       this.name = name;
       this.cusineType = cusineType;
+      this.serve = 0;
     }
   
     showInfo() {
@@ -30,7 +31,25 @@ class Restaurant {
         }
       }
     }
+    serve() {
+    this.served++;
+  };
+
+  setServed(numberOfClient) {
+  this.served += numberOfClient;
+}
+
+  showTotalServed() {
+ this.served();
   }
-  
+}
+
   const beshBarmak = new Restaurant("Besh Barmak", "kyrgyz");
+
+  console.log(beshBarmak);
   console.log(beshBarmak.isOpen());
+  console.log(beshBarmak.showInfo());
+
+  console.log(serve());
+  console.log(setServed());
+  console.log(showTotalServed());  
